@@ -6,6 +6,8 @@ using namespace std;
 int main() {
     cout << "== QUEUE DATABASE ==" << endl;
     Queue q;
+    q.first_loop = 1;
+
     q.enqueue(5);
     q.enqueue(10);
     q.enqueue(15);
