@@ -8,7 +8,7 @@ Queue::Queue() {
 }
 
 bool Queue::isEmpty() {
-    if (rear == -1 && front == -1) {
+    if (rear == -1 && front == -1 && first_loop != 1) {
         cout << "\nQueue is empty!" << endl;
 		return true;
 	}    

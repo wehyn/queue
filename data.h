@@ -8,6 +8,7 @@ private:
 
 public:
     Queue();
+    int first_loop;
 
     bool isEmpty();
     bool isFull();
