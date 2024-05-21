@@ -29,9 +29,6 @@ void Queue::enqueue(int x) {
         return;
     }
 
-    if (isEmpty()) {
-        front = rear = 0;
-    }
     else {
         rear++;
     }
