@@ -17,7 +17,7 @@ bool Queue::isEmpty() {
 
 bool Queue::isFull() { 
     if (rear != -1 && rear == MAX_SIZE - 1) {
-		cout << "\nError: Queue is full" << endl;
+		cout << "\nError: Queue is full!" << endl;
         return true;
     }
     return false;
@@ -41,10 +41,7 @@ void Queue::enqueue(int x) {
 }
 
 int Queue::dequeue() {
-    if (isEmpty()) {
-        cout << "\nError: Queue is empty!" << endl;
-        return -1;
-    }
+    if (isEmpty()) return -1;
 
     int x = arr[front];
     if (front == rear) {
@@ -63,9 +60,7 @@ int Queue::getSize() {
 }
 
 void Queue::displayQueue() {
-    if (isEmpty()) {
-        cout << "\nError: Queue is empty!" << endl;
-    }
+    if (isEmpty()) return;
     else {
         for (int i = front; i <= rear; i++) {
 			cout << arr[i] << " ";
@@ -75,9 +70,6 @@ void Queue::displayQueue() {
 }
 
 int Queue::getFront() {
-    if (isEmpty()) {
-		cout << "\nError: Queue is empty!" << endl;
-		return -1;
-	}
+    if (isEmpty()) return -1;
     return arr[front];
 }
