@@ -4,6 +4,7 @@
 using namespace std;
 
 int main() {
+    cout << "== QUEUE DATABASE ==" << endl;
     Queue q;
     q.enqueue(5);
     q.enqueue(10);

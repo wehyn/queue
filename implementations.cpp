@@ -9,7 +9,7 @@ Queue::Queue() {
 
 bool Queue::isEmpty() { //kristian
     if (rear == -1 && front == -1) {
-        cout << "Queue is empty" << endl;
+        cout << "\nQueue is empty!" << endl;
 		return true;
 	}    
 	return false;
@@ -17,7 +17,7 @@ bool Queue::isEmpty() { //kristian
 
 bool Queue::isFull() { //kristian
     if (rear != -1 && rear == MAX_SIZE - 1) {
-		cout << "Queue is full" << endl;
+		cout << "\nError: Queue is full" << endl;
         return true;
     }
     return false;
@@ -25,7 +25,7 @@ bool Queue::isFull() { //kristian
 
 void Queue::enqueue(int x) {
     if (isFull()) {
-        cout << "Error: Queue is full!" << endl;
+        cout << "\nError: Queue is full!" << endl;
         return;
     }
 
@@ -42,7 +42,7 @@ void Queue::enqueue(int x) {
 
 int Queue::dequeue() {
     if (isEmpty()) {
-        cout << "Error: Queue is empty!" << endl;
+        cout << "\nError: Queue is empty!" << endl;
         return -1;
     }
 
@@ -64,7 +64,7 @@ int Queue::getSize() {
 
 void Queue::displayQueue() { //kristian
     if (isEmpty()) {
-        cout << "Error: Queue is empty!" << endl;
+        cout << "\nError: Queue is empty!" << endl;
     }
     else {
         for (int i = front; i <= rear; i++) {
@@ -76,6 +76,6 @@ void Queue::displayQueue() { //kristian
 
 int Queue::getFront() {
     //TODO
-    cout << "This is getFront function" << endl;
+    cout << "\nThis is getFront function" << endl;
     return 0;
 }
